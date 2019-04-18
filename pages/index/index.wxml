@@ -20,5 +20,17 @@
   </view>
   <view>
     <button bindtap='scanCode'>wx.scanCode</button>
+    <button bindtap='vibrateShort'>wx.scanCode</button>
+    <button bindtap='startGyroscope'>开始调用陀螺仪</button>
+    <button bindtap='stopGyroscope'>结束调用陀螺仪</button>
+    <button bindtap='startDeviceMotionListening'>设备方向开始</button>
+    <button bindtap='stopDeviceMotionListening'>设备方向结束</button>
+    <button bindtap='makePhoneCall'>电话</button>
+    <button bindtap='getBatteryInfo'>电量</button>
+    <button bindtap='startBluetoothDevicesDiscovery'>开启蓝牙</button>
+    <button bindtap='stopBluetoothDevicesDiscovery'>关闭蓝牙</button>
+    <button bindtap='addPhoneContact'>联系人</button>
+    <button bindtap='startWifi'>开启wifi</button>
+    <button bindtap='stopWifi'>关闭wifi</button>
   </view>
 </view>

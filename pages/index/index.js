@@ -68,9 +68,101 @@ Page({
   },
   scanCode:()=>{
     wx.scanCode({
+      onlyFromCamera: true,
       success(res) {
         console.log(res)
       }
     })
-  }
+  },
+  vibrateShort: () => {
+    wx.vibrateLong({
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
+  stopGyroscope: () => {
+    wx.stopGyroscope({
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
+  startGyroscope: () => {
+    wx.startGyroscope({
+      success(res) {
+        console.log(res)
+      },
+      interval(res){
+        console.log(res)
+      }
+    })
+  },
+
+  startDeviceMotionListening: (game) => {
+    wx.startDeviceMotionListening({
+      success(res) {
+        console.log(res)
+      },
+      interval: game
+    })
+  },
+  stopDeviceMotionListening: () => {
+    wx.stopDeviceMotionListening({
+      success(res) {
+        console.log(res)
+      },
+      interval(res) {
+        console.log(res)
+      }
+    })
+  },
+  makePhoneCall: () => {
+    wx.makePhoneCall({
+      phoneNumber: '1340000'
+    })
+  },
+  getBatteryInfo: () => {
+    wx.getBatteryInfo({
+      success(res) {
+        console.log(res)
+      },
+    })
+  },
+  startBluetoothDevicesDiscovery: () => {
+    wx.startBluetoothDevicesDiscovery({
+      services: ['FEE7'],
+      success(res) {
+        console.log(res)
+      },
+    })
+  },
+  stopBluetoothDevicesDiscovery: () => {
+    wx.stopBluetoothDevicesDiscovery({
+      success(res) {
+        console.log(res)
+      },
+    })
+  },
+  addPhoneContact: () => {
+    wx.addPhoneContact({
+      success(res) {
+        console.log(res)
+      },
+    })
+  },
+  stopWifi: () => {
+    wx.stopWifi({
+      success(res) {
+        console.log(res)
+      },
+    })
+  },
+  startWifi: () => {
+    wx.stopWifi({
+      success(res) {
+        console.log(res)
+      },
+    })
+  },
 })
